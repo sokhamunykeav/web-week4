@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Flexbox Exercise 3</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .page-container {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .header, .footer, .main-content-wrapper, .main, .sidebar, .item {
+            border-radius: 0.5rem;
+            padding: 1rem;
+        }
+
+        .header, .main-content-wrapper {
+            margin: 1rem;
+        }
+        .footer {
+            margin: 0 1rem 1rem 1rem;
+        }
+
+        .header, .footer {
+            background-color: #3cb371;
+            box-shadow: 0 4px 6px #0077ea;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            min-height: 5rem;
+        }
+
+        .main-content-wrapper {
+            display: flex;
+            flex-grow: 1;
+            margin: 0 1rem 0 1rem;
+            gap: 1rem;
+            padding: 0;
+        }
+
+        .main {
+            background-color: #2f8d59;
+            box-shadow: 0 4px 6px #226741;
+            color: white;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            flex-grow: 1;
+            padding: 1rem;
+        }
+
+        .item {
+            background-color: #fff6347;
+            box-shadow: 0 2px 4px #e02200;
+            color: #333;
+            flex: 0 0 calc(25% - 0.75rem);
+            min-width: 5rem;
+            height: 5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .sidebar {
+            background-color: #e02200;
+            box-shadow: 0 4px 6px #1d44b8;
+            color: white;
+            width: 15rem;
+            flex-shrink: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <div class="page-container">
+        <header class="header">HEADER</header>
+
+        <div class="main-content-wrapper">
+            <main class="main">
+                <div class="item">Item 1</div>
+                <div class="item">Item 2</div>
+                <div class="item">Item 3</div>
+                <div class="item">Item 4</div>
+                <div class="item">Item 5</div>
+                <div class="item">Item 6</div>
+                <div class="item">Item 7</div>
+                <div class="item">Item 8</div>
+                <div class="item">Item 9</div>
+            </main>
+            <aside class="sidebar">SIDEBAR</aside>
+        </div>
+
+        <footer class="footer">FOOTER</footer>
+    </div>
+</body>
+</html>
